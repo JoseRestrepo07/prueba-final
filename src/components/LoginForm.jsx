@@ -13,7 +13,7 @@ const LoginForm = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch(`http://localhost:3001/users?email=${email}&password=${password}`);
+      const res = await fetch(`https://api-backend-1-01s5.onrender.com/users?email=${email}&password=${password}`);
       const data = await res.json();
 
       if (data.length > 0) {

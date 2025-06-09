@@ -7,13 +7,13 @@ const StudentDashboard = () => {
   const { name, className } = user;
 
   useEffect(() => {
-    fetch('http://localhost:3001/tasks')
+    fetch('https://api-backend-1-01s5.onrender.com/tasks')
       .then(res => res.json())
       .then(data => setTasks(data));
   }, []);
 
   const toggleDone = async (id, done) => {
-    await fetch(`http://localhost:3001/tasks/${id}`, {
+    await fetch(`https://api-backend-1-01s5.onrender.com/tasks/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ done: !done }),

@@ -7,7 +7,7 @@ const TeacherDashboard = () => {
   const [newTask, setNewTask] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:3001/tasks')
+    fetch('https://api-backend-1-01s5.onrender.com/tasks')
       .then(res => res.json())
       .then(data => setTasks(data));
   }, []);
@@ -17,7 +17,7 @@ const TeacherDashboard = () => {
 
     const taskObj = { title: newTask, done: false };
 
-    const res = await fetch('http://localhost:3001/tasks', {
+    const res = await fetch('https://api-backend-1-01s5.onrender.com/tasks', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(taskObj),
@@ -32,7 +32,7 @@ const TeacherDashboard = () => {
   };
 
   const handleDeleteTask = async (id) => {
-    await fetch(`http://localhost:3001/tasks/${id}`, {
+    await fetch(`https://api-backend-1-01s5.onrender.com/tasks/${id}`, {
       method: 'DELETE',
     });
 
