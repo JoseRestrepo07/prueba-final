@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "carlos@ejemplo.com",
+      "password": "1234",
+      "role": "teacher"
+    },
+    {
+      "id": "2",
+      "email": "laura@ejemplo.com",
+      "password": "abcd",
+      "role": "student"
+    },
+    {
+      "id": "9c20",
+      "email": "pepealfonso@gmail.com",
+      "password": "123456",
+      "role": "teacher"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "7474",
+      "title": "Ingles",
+      "done": false
+    }
+  ]
+}
